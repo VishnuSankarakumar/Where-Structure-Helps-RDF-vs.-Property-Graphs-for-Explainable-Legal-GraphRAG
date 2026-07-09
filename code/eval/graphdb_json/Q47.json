@@ -1,0 +1,12 @@
+{
+  "chatResponse": {
+    "modes": {
+      "graphdb_rdf": {
+        "metric_question": "The Regulation states that changes from pre-determined continuous learning after market placement do not constitute substantial modification if pre-assessed at conformity assessment. But it requires risk management throughout the 'entire lifecycle' including 'reasonably foreseeable misuse.' If an AI system's continuous learning produces behaviour that was pre-determined in type but not in outcome, does this create a regulatory gap where a system can evolve beyond its assessed scope without triggering new conformity assessment?",
+        "metric_answer": "The concern you've raised touches on a critical aspect of the EU AI Act regarding the balance between innovation and regulatory oversight. According to the regulation, continuous learning that was pre-assessed during the conformity assessment does not constitute a substantial modification. However, the requirement for risk management throughout the entire lifecycle of the AI system, including addressing reasonably foreseeable misuse, suggests that ongoing monitoring and evaluation are necessary. If an AI system's continuous learning results in behavior that was anticipated in type but not in specific outcomes, this could potentially create a regulatory gap. The Act emphasizes the importance of managing risks associated with AI systems throughout their lifecycle, which implies that organizations must remain vigilant about how the system evolves. If the outcomes of the AI's behavior diverge significantly from what was originally assessed, this could lead to unforeseen risks that were not accounted for in the initial conformity assessment. In this scenario, the organization may have an obligation to conduct a new risk assessment or even a new conformity assessment if the outcomes of the AI system's behavior pose new risks that were not previously considered. Therefore, while the regulation allows for some flexibility in continuous learning, it also imposes a duty to ensure that any significant changes in behavior are adequately managed and assessed. In summary, while the regulation provides a framework for continuous learning, it also necessitates ongoing risk management to address any potential gaps that may arise from evolving AI behaviors. Organizations must be proactive in monitoring and assessing their AI systems to ensure compliance with the EU AI Act.",
+        "metric_contexts": ""
+      }
+    }
+  },
+  "chunks": []
+}

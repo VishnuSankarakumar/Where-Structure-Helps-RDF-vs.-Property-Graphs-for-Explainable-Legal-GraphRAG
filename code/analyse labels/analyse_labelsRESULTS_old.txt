@@ -1,0 +1,465 @@
+Loading: graph_dump_robust.json
+4438 nodes
+
+
+----LABEL REPORT
+
+Total entity nodes: 3816
+Total distinct labels: 298
+
+FREQUENCY DISTRIBUTION:
+Labels with 100+ uses: 10
+Labels with 10-99 uses: 51
+Labels with 2-9 uses: 140
+Labels with 1 use: 97
+
+LABELS BY FREQUENCY:
+Characteristic: 770
+Process: 421
+Organization: 331
+Product: 234
+Law: 222
+Activity: 172
+Concept: 135
+Regulation: 122
+Person: 112
+Document: 110
+Risk: 90
+Policy: 75
+Right: 72
+Technology: 69
+Requirement: 59
+Event: 54
+Group: 54
+Obligation: 52
+Service: 46
+Data: 44
+System: 40
+Objective: 40
+Domain: 36
+Location: 36
+Principle: 32
+Place: 32
+Action: 32
+Purpose: 31
+Topic: 28
+Directive: 24
+LegalConcept: 23
+Information: 22
+Legal Provision: 21
+Standard: 21
+Content: 20
+Legal Act: 18
+Field: 18
+Attribute: 17
+LegalDocument: 16
+Task: 16
+LegalProvision: 15
+Issue: 15
+Company: 14
+Practice: 13
+GovernmentBody: 12
+AI System: 12
+Publication: 12
+Context: 12
+Infrastructure: 12
+Method: 12
+Outcome: 11
+Decision: 11
+Role: 11
+Output: 11
+AI Model: 11
+Emotion: 11
+Industry: 11
+UseCase: 11
+Agreement: 10
+Condition: 10
+Program: 10
+GovernmentAgency: 9
+LegalInstrument: 9
+Procedure: 9
+Sector: 9
+Measure: 9
+Work: 9
+AISystem: 8
+Benefit: 8
+Harm: 8
+Identifier: 8
+Dataset: 8
+Technique: 8
+Legal_Provision: 8
+Provision: 7
+Database: 7
+PersonalAttribute: 7
+Category: 7
+Platform: 7
+Threat: 7
+Component: 7
+Capability: 7
+LegalAct: 6
+HarmType: 6
+Device: 6
+Stakeholder: 6
+Country: 6
+Application: 6
+Treaty: 5
+Goal: 5
+Actor: 5
+Interest: 5
+Framework: 5
+Model: 5
+OrganizationType: 5
+Legal Framework: 5
+Effect: 5
+Penalty: 5
+Impact: 5
+Resource: 5
+Language: 5
+Metric: 5
+Legal Document: 4
+AI_System: 4
+Market: 4
+Legal_Instrument: 4
+Power: 4
+Environment: 4
+Material: 4
+Gesture: 4
+Skill: 4
+Entity: 4
+AIModel: 4
+Value: 4
+Situation: 4
+Assessment: 4
+Legal_Concept: 4
+Vehicle: 4
+Facility: 4
+Tool: 4
+Proceeding: 4
+Distribution Channel: 4
+ModelAttribute: 4
+RiskArea: 3
+ProtectedInterest: 3
+FundamentalRight: 3
+Initiative: 3
+Content_Type: 3
+Feature: 3
+ExpressionType: 3
+Object: 3
+Space: 3
+MarketActor: 3
+RiskCategory: 3
+Treatment: 3
+Scope: 3
+Legal Principle: 3
+Article: 3
+Asset: 3
+Rule: 3
+Lifecycle: 3
+License: 3
+Safeguard: 3
+Channel: 3
+Person_Group: 3
+Incident: 3
+Certification: 3
+Development: 3
+Acronym: 3
+EnforcementMeasure: 3
+Region: 2
+Jurisdiction: 2
+Government: 2
+RegulatoryFramework: 2
+Regulatory Activity: 2
+Website: 2
+Algorithm: 2
+Artifact: 2
+BiometricIdentifier: 2
+Definition: 2
+PhysicalState: 2
+Expression: 2
+Profession: 2
+VoiceCharacteristic: 2
+FacialExpression: 2
+Knowledge: 2
+Authority: 2
+RiskLevel: 2
+Classification: 2
+AI System/Model: 2
+Consent: 2
+DocumentSection: 2
+MedicalCondition: 2
+Request: 2
+LegalRequirement: 2
+PolicyArea: 2
+Legal Scope: 2
+Mechanism: 2
+Methodology: 2
+Area: 2
+RegulatoryList: 2
+List: 2
+SocialIssue: 2
+Complaint: 2
+Status: 2
+AdministrativeLevel: 2
+Responsibility: 2
+ConfidentialInformation: 2
+Phase: 2
+Award: 2
+StakeholderGroup: 2
+SecurityDomain: 2
+Solution: 2
+Exception: 2
+Consideration: 2
+Ecosystem: 2
+Funding: 2
+Cost: 2
+Guidance: 2
+Infringement: 2
+Legal_Article: 2
+Government Body: 1
+Society: 1
+Commitment: 1
+URL: 1
+LegalRemedy: 1
+Relationship: 1
+WorkingCondition: 1
+PublicationSeries: 1
+Remedy: 1
+Movement: 1
+RiskClassification: 1
+Risk Level: 1
+Legal Role: 1
+Approach: 1
+Guideline: 1
+Disease: 1
+Offence: 1
+PersonGroup: 1
+LegalDoctrine: 1
+LegalFramework: 1
+Legal Concept: 1
+Media: 1
+Use Case: 1
+PublicInterest: 1
+Legislation: 1
+LawType: 1
+GovernanceMechanism: 1
+Product Component: 1
+Regulatory_List: 1
+Agency: 1
+Property: 1
+Behavior: 1
+Hazard: 1
+Interaction: 1
+Governance: 1
+Example: 1
+LegalObligation: 1
+Constraint: 1
+Indicator: 1
+Attack: 1
+Vulnerability: 1
+Legal_Act: 1
+Digital_Service: 1
+Government_Authority: 1
+Access: 1
+AIComponent: 1
+BusinessCase: 1
+Legal Instrument: 1
+Factor: 1
+Parameter: 1
+ContentType: 1
+Repository: 1
+Transaction: 1
+BusinessConcept: 1
+DataCollection: 1
+Archive: 1
+Data Source: 1
+Strategy: 1
+Claim: 1
+Form: 1
+SecurityMeasure: 1
+Concern: 1
+Instrument: 1
+Functionality: 1
+SystemComponent: 1
+Report: 1
+Need: 1
+PublicationReference: 1
+Format: 1
+Section: 1
+Communication: 1
+Mission: 1
+Specification: 1
+Committee: 1
+Competency: 1
+PublicEntity: 1
+Experience: 1
+LegalViolation: 1
+RegulatoryAction: 1
+Investigation: 1
+AI_System_Category: 1
+LegalIssue: 1
+Alert: 1
+Expertise: 1
+Barrier: 1
+LegalPrinciple: 1
+Violation: 1
+LegalDecision: 1
+Court: 1
+LegalPower: 1
+Regulatory_Condition: 1
+Deliverable: 1
+IT System: 1
+TimePeriod: 1
+LegalDomain: 1
+Structure: 1
+Chapter: 1
+
+FORMATTING VARIANTS:
+'aimodel':
+  - AI Model: 11
+  - AIModel: 4
+'aisystem':
+  - AI System: 12
+  - AI_System: 4
+  - AISystem: 8
+'contenttype':
+  - Content_Type: 3
+  - ContentType: 1
+'governmentbody':
+  - GovernmentBody: 12
+  - Government Body: 1
+'legalact':
+  - LegalAct: 6
+  - Legal Act: 18
+  - Legal_Act: 1
+'legalconcept':
+  - LegalConcept: 23
+  - Legal_Concept: 4
+  - Legal Concept: 1
+'legaldocument':
+  - Legal Document: 4
+  - LegalDocument: 16
+'legalframework':
+  - Legal Framework: 5
+  - LegalFramework: 1
+'legalinstrument':
+  - LegalInstrument: 9
+  - Legal_Instrument: 4
+  - Legal Instrument: 1
+'legalprinciple':
+  - Legal Principle: 3
+  - LegalPrinciple: 1
+'legalprovision':
+  - Legal Provision: 21
+  - LegalProvision: 15
+  - Legal_Provision: 8
+'persongroup':
+  - PersonGroup: 1
+  - Person_Group: 3
+'regulatorylist':
+  - Regulatory_List: 1
+  - RegulatoryList: 2
+'risklevel':
+  - Risk Level: 1
+  - RiskLevel: 2
+'usecase':
+  - UseCase: 11
+  - Use Case: 1
+
+SINGLETON LABELS (97 labels with 1 use):
+AIComponent
+AI_System_Category
+Access
+Agency
+Alert
+Approach
+Archive
+Attack
+Barrier
+Behavior
+BusinessCase
+BusinessConcept
+Chapter
+Claim
+Commitment
+Committee
+Communication
+Competency
+Concern
+Constraint
+ContentType
+Court
+Data Source
+DataCollection
+Deliverable
+Digital_Service
+Disease
+Example
+Experience
+Expertise
+Factor
+Form
+Format
+Functionality
+Governance
+GovernanceMechanism
+Government Body
+Government_Authority
+Guideline
+Hazard
+IT System
+Indicator
+Instrument
+Interaction
+Investigation
+LawType
+Legal Concept
+Legal Instrument
+Legal Role
+LegalDecision
+LegalDoctrine
+LegalDomain
+LegalFramework
+LegalIssue
+LegalObligation
+LegalPower
+LegalPrinciple
+LegalRemedy
+LegalViolation
+Legal_Act
+Legislation
+Media
+Mission
+Movement
+Need
+Offence
+Parameter
+PersonGroup
+Product Component
+Property
+PublicEntity
+PublicInterest
+PublicationReference
+PublicationSeries
+RegulatoryAction
+Regulatory_Condition
+Regulatory_List
+Relationship
+Remedy
+Report
+Repository
+Risk Level
+RiskClassification
+Section
+SecurityMeasure
+Society
+Specification
+Strategy
+Structure
+SystemComponent
+TimePeriod
+Transaction
+URL
+Use Case
+Violation
+Vulnerability
+WorkingCondition

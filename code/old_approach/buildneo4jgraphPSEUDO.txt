@@ -1,0 +1,41 @@
+import libraries and load environment variables
+set database credentials and api keys
+define pdf file path
+
+if password is missing
+    print error and exit
+
+connect to neo4j database
+delete all existing nodes and relationships
+drop existing vector index
+
+try to load pdf file
+    catch error print details and exit
+
+limit text to first 40 pages
+split text into chunks of 1000 characters
+print number of chunks created
+
+initialize llama 3 model via groq
+initialize embedding model
+setup graph transformer
+
+set batch size to 5
+loop through text chunks in batches
+    try
+        extract graph nodes and relationships using llm
+        save graph data to neo4j database
+    catch error
+        print error details and wait 5 seconds
+
+create vector index on document nodes
+
+loop through all text chunks
+    try
+        calculate vector embedding for chunk text
+        find document node in database
+        update node with embedding
+    catch error
+        print error details
+
+print success message

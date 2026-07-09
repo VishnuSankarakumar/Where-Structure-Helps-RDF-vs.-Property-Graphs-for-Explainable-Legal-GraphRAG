@@ -1,0 +1,953 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix euai: <https://euaiact.eu/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://euaiact.eu/ontology> a owl:Ontology ;
+    rdfs:label "EU AI Act Knowledge Graph Ontology" ;
+    dcterms:created "2026-02-11" ;
+    dcterms:creator "Masters Research Project" ;
+    rdfs:comment "Ontology for the EU AI Act knowledge graph, transformed from Neo4j LLM-extracted graph. Designed for Graph RAG comparison study." .
+
+euai:AIComponent a owl:Class ;
+    rdfs:label "AIComponent" ;
+    rdfs:subClassOf euai:AISystem .
+
+euai:AIModel a owl:Class ;
+    rdfs:label "AIModel" ;
+    rdfs:subClassOf euai:Entity .
+
+euai:Access a owl:Class ;
+    rdfs:label "Access" ;
+    rdfs:subClassOf euai:Entity .
+
+euai:Activity a owl:Class ;
+    rdfs:label "Activity" ;
+    rdfs:subClassOf euai:Process .
+
+euai:Algorithm a owl:Class ;
+    rdfs:label "Algorithm" ;
+    rdfs:subClassOf euai:Entity .
+
+euai:Annex a owl:Class ;
+    rdfs:label "Annex" ;
+    rdfs:subClassOf euai:LegalProvision .
+
+euai:Article a owl:Class ;
+    rdfs:label "Article" ;
+    rdfs:subClassOf euai:LegalProvision .
+
+euai:Attack a owl:Class ;
+    rdfs:label "Attack" ;
+    rdfs:subClassOf euai:Threat .
+
+euai:Chapter a owl:Class ;
+    rdfs:label "Chapter" ;
+    rdfs:subClassOf euai:LegalProvision .
+
+euai:Company a owl:Class ;
+    rdfs:label "Company" ;
+    rdfs:subClassOf euai:Organization .
+
+euai:Consent a owl:Class ;
+    rdfs:label "Consent" ;
+    rdfs:subClassOf euai:Entity .
+
+euai:Constraint a owl:Class ;
+    rdfs:label "Constraint" ;
+    rdfs:subClassOf euai:Requirement .
+
+euai:Country a owl:Class ;
+    rdfs:label "Country" ;
+    rdfs:subClassOf euai:Location .
+
+euai:Database a owl:Class ;
+    rdfs:label "Database" ;
+    rdfs:subClassOf euai:Data .
+
+euai:Decision a owl:Class ;
+    rdfs:label "Decision" ;
+    rdfs:subClassOf euai:Event .
+
+euai:Development a owl:Class ;
+    rdfs:label "Development" ;
+    rdfs:subClassOf euai:Entity .
+
+euai:Directive a owl:Class ;
+    rdfs:label "Directive" ;
+    rdfs:subClassOf euai:LegalInstrument .
+
+euai:FundamentalRight a owl:Class ;
+    rdfs:label "FundamentalRight" ;
+    rdfs:subClassOf euai:Right .
+
+euai:GovernmentBody a owl:Class ;
+    rdfs:label "GovernmentBody" ;
+    rdfs:subClassOf euai:Organization .
+
+euai:Group a owl:Class ;
+    rdfs:label "Group" ;
+    rdfs:subClassOf euai:Person .
+
+euai:Guidance a owl:Class ;
+    rdfs:label "Guidance" ;
+    rdfs:subClassOf euai:Concept .
+
+euai:HarmType a owl:Class ;
+    rdfs:label "HarmType" ;
+    rdfs:subClassOf euai:Harm .
+
+euai:Hazard a owl:Class ;
+    rdfs:label "Hazard" ;
+    rdfs:subClassOf euai:Threat .
+
+euai:ITSystem a owl:Class ;
+    rdfs:label "ITSystem" ;
+    rdfs:subClassOf euai:System .
+
+euai:Incident a owl:Class ;
+    rdfs:label "Incident" ;
+    rdfs:subClassOf euai:Event .
+
+euai:Infrastructure a owl:Class ;
+    rdfs:label "Infrastructure" ;
+    rdfs:subClassOf euai:Entity .
+
+euai:Jurisdiction a owl:Class ;
+    rdfs:label "Jurisdiction" ;
+    rdfs:subClassOf euai:Entity .
+
+euai:LegalConcept a owl:Class ;
+    rdfs:label "LegalConcept" ;
+    rdfs:subClassOf euai:LegalEntity .
+
+euai:LegalRole a owl:Class ;
+    rdfs:label "LegalRole" ;
+    rdfs:subClassOf euai:Role .
+
+euai:Lifecycle a owl:Class ;
+    rdfs:label "Lifecycle" ;
+    rdfs:subClassOf euai:Entity .
+
+euai:MarketActor a owl:Class ;
+    rdfs:label "MarketActor" ;
+    rdfs:subClassOf euai:Actor .
+
+euai:Method a owl:Class ;
+    rdfs:label "Method" ;
+    rdfs:subClassOf euai:Process .
+
+euai:Model a owl:Class ;
+    rdfs:label "Model" ;
+    rdfs:subClassOf euai:Entity .
+
+euai:Objective a owl:Class ;
+    rdfs:label "Objective" ;
+    rdfs:subClassOf euai:Concept .
+
+euai:Obligation a owl:Class ;
+    rdfs:label "Obligation" ;
+    rdfs:subClassOf euai:Requirement .
+
+euai:Policy a owl:Class ;
+    rdfs:label "Policy" ;
+    rdfs:subClassOf euai:Concept .
+
+euai:Principle a owl:Class ;
+    rdfs:label "Principle" ;
+    rdfs:subClassOf euai:Concept .
+
+euai:Procedure a owl:Class ;
+    rdfs:label "Procedure" ;
+    rdfs:subClassOf euai:Process .
+
+euai:ProtectedInterest a owl:Class ;
+    rdfs:label "ProtectedInterest" ;
+    rdfs:subClassOf euai:Interest .
+
+euai:PublicInterest a owl:Class ;
+    rdfs:label "PublicInterest" ;
+    rdfs:subClassOf euai:Interest .
+
+euai:Publication a owl:Class ;
+    rdfs:label "Publication" ;
+    rdfs:subClassOf euai:LegalDocument .
+
+euai:Recital a owl:Class ;
+    rdfs:label "Recital" ;
+    rdfs:subClassOf euai:LegalProvision .
+
+euai:Region a owl:Class ;
+    rdfs:label "Region" ;
+    rdfs:subClassOf euai:Location .
+
+euai:Regulation a owl:Class ;
+    rdfs:label "Regulation" ;
+    rdfs:subClassOf euai:LegalInstrument .
+
+euai:RiskArea a owl:Class ;
+    rdfs:label "RiskArea" ;
+    rdfs:subClassOf euai:Risk .
+
+euai:RiskCategory a owl:Class ;
+    rdfs:label "RiskCategory" ;
+    rdfs:subClassOf euai:Risk .
+
+euai:RiskClassification a owl:Class ;
+    rdfs:label "RiskClassification" ;
+    rdfs:subClassOf euai:Risk .
+
+euai:RiskLevel a owl:Class ;
+    rdfs:label "RiskLevel" ;
+    rdfs:subClassOf euai:Risk .
+
+euai:Section a owl:Class ;
+    rdfs:label "Section" ;
+    rdfs:subClassOf euai:LegalProvision .
+
+euai:Sector a owl:Class ;
+    rdfs:label "Sector" ;
+    rdfs:subClassOf euai:Concept .
+
+euai:Service a owl:Class ;
+    rdfs:label "Service" ;
+    rdfs:subClassOf euai:Product .
+
+euai:Stakeholder a owl:Class ;
+    rdfs:label "Stakeholder" ;
+    rdfs:subClassOf euai:Actor .
+
+euai:Standard a owl:Class ;
+    rdfs:label "Standard" ;
+    rdfs:subClassOf euai:Requirement .
+
+euai:SystemComponent a owl:Class ;
+    rdfs:label "SystemComponent" ;
+    rdfs:subClassOf euai:System .
+
+euai:Technology a owl:Class ;
+    rdfs:label "Technology" ;
+    rdfs:subClassOf euai:Entity .
+
+euai:Treaty a owl:Class ;
+    rdfs:label "Treaty" ;
+    rdfs:subClassOf euai:LegalInstrument .
+
+euai:Vulnerability a owl:Class ;
+    rdfs:label "Vulnerability" ;
+    rdfs:subClassOf euai:Risk .
+
+euai:about a owl:ObjectProperty ;
+    rdfs:label "about" ;
+    rdfs:subPropertyOf euai:associationRelation .
+
+euai:addresses a owl:ObjectProperty ;
+    rdfs:label "addresses" ;
+    rdfs:subPropertyOf euai:targetingRelation .
+
+euai:aimsTo a owl:ObjectProperty ;
+    rdfs:label "aimsTo" ;
+    rdfs:subPropertyOf euai:targetingRelation .
+
+euai:allows a owl:ObjectProperty ;
+    rdfs:label "allows" ;
+    rdfs:subPropertyOf euai:regulatoryRelation .
+
+euai:appliedIn a owl:ObjectProperty ;
+    rdfs:label "appliedIn" ;
+    rdfs:subPropertyOf euai:applicationRelation .
+
+euai:appliesTo a owl:ObjectProperty ;
+    rdfs:label "appliesTo" ;
+    rdfs:subPropertyOf euai:applicationRelation .
+
+euai:assesses a owl:ObjectProperty ;
+    rdfs:label "assesses" ;
+    rdfs:subPropertyOf euai:assessmentRelation .
+
+euai:assignedTo a owl:ObjectProperty ;
+    rdfs:label "assignedTo" ;
+    rdfs:subPropertyOf euai:assignmentRelation .
+
+euai:assigns a owl:ObjectProperty ;
+    rdfs:label "assigns" ;
+    rdfs:subPropertyOf euai:assignmentRelation .
+
+euai:associatedWith a owl:ObjectProperty ;
+    rdfs:label "associatedWith" ;
+    rdfs:subPropertyOf euai:associationRelation .
+
+euai:basedOn a owl:ObjectProperty ;
+    rdfs:label "basedOn" ;
+    rdfs:subPropertyOf euai:derivationRelation .
+
+euai:belongsTo a owl:ObjectProperty ;
+    rdfs:label "belongsTo" ;
+    rdfs:subPropertyOf euai:classificationRelation .
+
+euai:carriesOut a owl:ObjectProperty ;
+    rdfs:label "carriesOut" ;
+    rdfs:subPropertyOf euai:actionRelation .
+
+euai:causes a owl:ObjectProperty ;
+    rdfs:label "causes" ;
+    rdfs:subPropertyOf euai:effectRelation .
+
+euai:chargedWith a owl:ObjectProperty ;
+    rdfs:label "chargedWith" ;
+    rdfs:subPropertyOf euai:assignmentRelation .
+
+euai:chunkOf a owl:ObjectProperty ;
+    rdfs:label "chunkOf" ;
+    rdfs:comment "Links a document chunk to its source document" ;
+    rdfs:domain euai:DocumentChunk .
+
+euai:chunkText a owl:DatatypeProperty ;
+    rdfs:label "chunkText" ;
+    rdfs:comment "The text content of a document chunk" ;
+    rdfs:domain euai:DocumentChunk ;
+    rdfs:range xsd:string .
+
+euai:classifiedAs a owl:ObjectProperty ;
+    rdfs:label "classifiedAs" ;
+    rdfs:subPropertyOf euai:classificationRelation .
+
+euai:compliesWith a owl:ObjectProperty ;
+    rdfs:label "compliesWith" ;
+    rdfs:subPropertyOf euai:requirementRelation .
+
+euai:comprises a owl:ObjectProperty ;
+    rdfs:label "comprises" ;
+    rdfs:subPropertyOf euai:structuralRelation .
+
+euai:considers a owl:ObjectProperty ;
+    rdfs:label "considers" ;
+    rdfs:subPropertyOf euai:considerationRelation .
+
+euai:consults a owl:ObjectProperty ;
+    rdfs:label "consults" ;
+    rdfs:subPropertyOf euai:cooperationRelation .
+
+euai:contentOffset a owl:DatatypeProperty ;
+    rdfs:label "contentOffset" ;
+    rdfs:comment "Character offset in source document" ;
+    rdfs:domain euai:DocumentChunk ;
+    rdfs:range xsd:integer .
+
+euai:contributesTo a owl:ObjectProperty ;
+    rdfs:label "contributesTo" ;
+    rdfs:subPropertyOf euai:supportRelation .
+
+euai:cooperatesWith a owl:ObjectProperty ;
+    rdfs:label "cooperatesWith" ;
+    rdfs:subPropertyOf euai:cooperationRelation .
+
+euai:covers a owl:ObjectProperty ;
+    rdfs:label "covers" ;
+    rdfs:subPropertyOf euai:scopeRelation .
+
+euai:definedIn a owl:ObjectProperty ;
+    rdfs:label "definedIn" ;
+    rdfs:subPropertyOf euai:referenceRelation .
+
+euai:derivedFrom a owl:ObjectProperty ;
+    rdfs:label "derivedFrom" ;
+    rdfs:subPropertyOf euai:derivationRelation .
+
+euai:describes a owl:ObjectProperty ;
+    rdfs:label "describes" ;
+    rdfs:subPropertyOf euai:referenceRelation .
+
+euai:designates a owl:ObjectProperty ;
+    rdfs:label "designates" ;
+    rdfs:subPropertyOf euai:establishmentRelation .
+
+euai:develops a owl:ObjectProperty ;
+    rdfs:label "develops" ;
+    rdfs:subPropertyOf euai:actionRelation .
+
+euai:enables a owl:ObjectProperty ;
+    rdfs:label "enables" ;
+    rdfs:subPropertyOf euai:provisionRelation .
+
+euai:ensures a owl:ObjectProperty ;
+    rdfs:label "ensures" ;
+    rdfs:subPropertyOf euai:provisionRelation .
+
+euai:establishedIn a owl:ObjectProperty ;
+    rdfs:label "establishedIn" ;
+    rdfs:subPropertyOf euai:establishmentRelation .
+
+euai:evaluates a owl:ObjectProperty ;
+    rdfs:label "evaluates" ;
+    rdfs:subPropertyOf euai:assessmentRelation .
+
+euai:excludes a owl:ObjectProperty ;
+    rdfs:label "excludes" ;
+    rdfs:subPropertyOf euai:scopeRelation .
+
+euai:facilitates a owl:ObjectProperty ;
+    rdfs:label "facilitates" ;
+    rdfs:subPropertyOf euai:supportRelation .
+
+euai:fileName a owl:DatatypeProperty ;
+    rdfs:label "fileName" ;
+    rdfs:comment "Source file name" ;
+    rdfs:domain euai:DocumentChunk ;
+    rdfs:range xsd:string .
+
+euai:for a owl:ObjectProperty ;
+    rdfs:label "for" ;
+    rdfs:subPropertyOf euai:targetingRelation .
+
+euai:has a owl:ObjectProperty ;
+    rdfs:label "has" ;
+    rdfs:subPropertyOf euai:structuralRelation .
+
+euai:hasCharacteristic a owl:ObjectProperty ;
+    rdfs:label "hasCharacteristic" ;
+    rdfs:subPropertyOf euai:structuralRelation .
+
+euai:hasIdentifier a owl:ObjectProperty ;
+    rdfs:label "hasIdentifier" ;
+    rdfs:subPropertyOf euai:structuralRelation .
+
+euai:hasObjective a owl:ObjectProperty ;
+    rdfs:label "hasObjective" ;
+    rdfs:subPropertyOf euai:structuralRelation .
+
+euai:hasObligation a owl:ObjectProperty ;
+    rdfs:label "hasObligation" ;
+    rdfs:subPropertyOf euai:requirementRelation .
+
+euai:hasPurpose a owl:ObjectProperty ;
+    rdfs:label "hasPurpose" ;
+    rdfs:subPropertyOf euai:structuralRelation .
+
+euai:hasRequirement a owl:ObjectProperty ;
+    rdfs:label "hasRequirement" ;
+    rdfs:subPropertyOf euai:requirementRelation .
+
+euai:hasRight a owl:ObjectProperty ;
+    rdfs:label "hasRight" ;
+    rdfs:subPropertyOf euai:structuralRelation .
+
+euai:hasRisk a owl:ObjectProperty ;
+    rdfs:label "hasRisk" ;
+    rdfs:subPropertyOf euai:structuralRelation .
+
+euai:identifies a owl:ObjectProperty ;
+    rdfs:label "identifies" ;
+    rdfs:subPropertyOf euai:assessmentRelation .
+
+euai:implements a owl:ObjectProperty ;
+    rdfs:label "implements" ;
+    rdfs:subPropertyOf euai:actionRelation .
+
+euai:inAccordanceWith a owl:ObjectProperty ;
+    rdfs:label "inAccordanceWith" ;
+    rdfs:subPropertyOf euai:derivationRelation .
+
+euai:integratedInto a owl:ObjectProperty ;
+    rdfs:label "integratedInto" ;
+    rdfs:subPropertyOf euai:structuralRelation .
+
+euai:intendedFor a owl:ObjectProperty ;
+    rdfs:label "intendedFor" ;
+    rdfs:subPropertyOf euai:usageRelation .
+
+euai:isA a owl:ObjectProperty ;
+    rdfs:label "isA" ;
+    rdfs:subPropertyOf euai:classificationRelation .
+
+euai:leadsTo a owl:ObjectProperty ;
+    rdfs:label "leadsTo" ;
+    rdfs:subPropertyOf euai:effectRelation .
+
+euai:listedIn a owl:ObjectProperty ;
+    rdfs:label "listedIn" ;
+    rdfs:subPropertyOf euai:referenceRelation .
+
+euai:mentionedIn a owl:ObjectProperty ;
+    rdfs:label "mentionedIn" ;
+    rdfs:subPropertyOf euai:referenceRelation .
+
+euai:mentionedInChunk a owl:ObjectProperty ;
+    rdfs:label "mentionedInChunk" ;
+    rdfs:comment "Links an entity to the document chunk where it is mentioned" ;
+    rdfs:range euai:DocumentChunk ;
+    rdfs:subPropertyOf euai:relation .
+
+euai:monitors a owl:ObjectProperty ;
+    rdfs:label "monitors" ;
+    rdfs:subPropertyOf euai:assessmentRelation .
+
+euai:mustComplyWith a owl:ObjectProperty ;
+    rdfs:label "mustComplyWith" ;
+    rdfs:subPropertyOf euai:requirementRelation .
+
+euai:operates a owl:ObjectProperty ;
+    rdfs:label "operates" ;
+    rdfs:subPropertyOf euai:actionRelation .
+
+euai:otherRelation a owl:ObjectProperty ;
+    rdfs:label "otherRelation" ;
+    rdfs:subPropertyOf euai:relation .
+
+euai:pageNumber a owl:DatatypeProperty ;
+    rdfs:label "pageNumber" ;
+    rdfs:comment "Page number where the chunk appears" ;
+    rdfs:domain euai:DocumentChunk ;
+    rdfs:range xsd:integer .
+
+euai:partOf a owl:ObjectProperty ;
+    rdfs:label "partOf" ;
+    rdfs:subPropertyOf euai:structuralRelation .
+
+euai:participatesIn a owl:ObjectProperty ;
+    rdfs:label "participatesIn" ;
+    rdfs:subPropertyOf euai:involvementRelation .
+
+euai:performs a owl:ObjectProperty ;
+    rdfs:label "performs" ;
+    rdfs:subPropertyOf euai:actionRelation .
+
+euai:placedOn a owl:ObjectProperty ;
+    rdfs:label "placedOn" ;
+    rdfs:subPropertyOf euai:scopeRelation .
+
+euai:position a owl:DatatypeProperty ;
+    rdfs:label "position" ;
+    rdfs:comment "Sequential position of chunk within document" ;
+    rdfs:domain euai:DocumentChunk ;
+    rdfs:range xsd:integer .
+
+euai:produces a owl:ObjectProperty ;
+    rdfs:label "produces" ;
+    rdfs:subPropertyOf euai:effectRelation .
+
+euai:prohibits a owl:ObjectProperty ;
+    rdfs:label "prohibits" ;
+    rdfs:subPropertyOf euai:regulatoryRelation .
+
+euai:promotes a owl:ObjectProperty ;
+    rdfs:label "promotes" ;
+    rdfs:subPropertyOf euai:supportRelation .
+
+euai:publishedIn a owl:ObjectProperty ;
+    rdfs:label "publishedIn" ;
+    rdfs:subPropertyOf euai:enactmentRelation .
+
+euai:pursuantTo a owl:ObjectProperty ;
+    rdfs:label "pursuantTo" ;
+    rdfs:subPropertyOf euai:derivationRelation .
+
+euai:recognizes a owl:ObjectProperty ;
+    rdfs:label "recognizes" ;
+    rdfs:subPropertyOf euai:considerationRelation .
+
+euai:refersTo a owl:ObjectProperty ;
+    rdfs:label "refersTo" ;
+    rdfs:subPropertyOf euai:referenceRelation .
+
+euai:relatedTo a owl:ObjectProperty ;
+    rdfs:label "relatedTo" ;
+    rdfs:subPropertyOf euai:associationRelation .
+
+euai:reportsTo a owl:ObjectProperty ;
+    rdfs:label "reportsTo" ;
+    rdfs:subPropertyOf euai:cooperationRelation .
+
+euai:resembles a owl:ObjectProperty ;
+    rdfs:label "resembles" ;
+    rdfs:subPropertyOf euai:classificationRelation .
+
+euai:restricts a owl:ObjectProperty ;
+    rdfs:label "restricts" ;
+    rdfs:subPropertyOf euai:regulatoryRelation .
+
+euai:setOutIn a owl:ObjectProperty ;
+    rdfs:label "setOutIn" ;
+    rdfs:subPropertyOf euai:referenceRelation .
+
+euai:subjectTo a owl:ObjectProperty ;
+    rdfs:label "subjectTo" ;
+    rdfs:subPropertyOf euai:requirementRelation .
+
+euai:takesIntoAccount a owl:ObjectProperty ;
+    rdfs:label "takesIntoAccount" ;
+    rdfs:subPropertyOf euai:considerationRelation .
+
+euai:targets a owl:ObjectProperty ;
+    rdfs:label "targets" ;
+    rdfs:subPropertyOf euai:targetingRelation .
+
+euai:threatens a owl:ObjectProperty ;
+    rdfs:label "threatens" ;
+    rdfs:subPropertyOf euai:protectionRelation .
+
+euai:under a owl:ObjectProperty ;
+    rdfs:label "under" ;
+    rdfs:subPropertyOf euai:derivationRelation .
+
+euai:usedFor a owl:ObjectProperty ;
+    rdfs:label "usedFor" ;
+    rdfs:subPropertyOf euai:usageRelation .
+
+euai:usedIn a owl:ObjectProperty ;
+    rdfs:label "usedIn" ;
+    rdfs:subPropertyOf euai:usageRelation .
+
+euai:withoutPrejudiceTo a owl:ObjectProperty ;
+    rdfs:label "withoutPrejudiceTo" ;
+    rdfs:subPropertyOf euai:derivationRelation .
+
+euai:AISystem a owl:Class ;
+    rdfs:label "AISystem" ;
+    rdfs:subClassOf euai:System .
+
+euai:Characteristic a owl:Class ;
+    rdfs:label "Characteristic" ;
+    rdfs:subClassOf euai:Entity .
+
+euai:Data a owl:Class ;
+    rdfs:label "Data" ;
+    rdfs:subClassOf euai:Entity .
+
+euai:Harm a owl:Class ;
+    rdfs:label "Harm" ;
+    rdfs:subClassOf euai:Risk .
+
+euai:LegalDocument a owl:Class ;
+    rdfs:label "LegalDocument" ;
+    rdfs:subClassOf euai:LegalEntity .
+
+euai:Person a owl:Class ;
+    rdfs:label "Person" ;
+    rdfs:subClassOf euai:Actor .
+
+euai:Product a owl:Class ;
+    rdfs:label "Product" ;
+    rdfs:subClassOf euai:Entity .
+
+euai:Right a owl:Class ;
+    rdfs:label "Right" ;
+    rdfs:subClassOf euai:Entity .
+
+euai:Role a owl:Class ;
+    rdfs:label "Role" ;
+    rdfs:subClassOf euai:Characteristic .
+
+euai:adoptedBy a owl:ObjectProperty ;
+    rdfs:label "adoptedBy" ;
+    rdfs:subPropertyOf euai:enactmentRelation ;
+    owl:inverseOf euai:adopts .
+
+euai:adopts a owl:ObjectProperty ;
+    rdfs:label "adopts" ;
+    rdfs:subPropertyOf euai:enactmentRelation ;
+    owl:inverseOf euai:adoptedBy .
+
+euai:affectedBy a owl:ObjectProperty ;
+    rdfs:label "affectedBy" ;
+    rdfs:subPropertyOf euai:effectRelation ;
+    owl:inverseOf euai:affects .
+
+euai:affects a owl:ObjectProperty ;
+    rdfs:label "affects" ;
+    rdfs:subPropertyOf euai:effectRelation ;
+    owl:inverseOf euai:affectedBy .
+
+euai:amendedBy a owl:ObjectProperty ;
+    rdfs:label "amendedBy" ;
+    rdfs:subPropertyOf euai:modificationRelation ;
+    owl:inverseOf euai:amends .
+
+euai:amends a owl:ObjectProperty ;
+    rdfs:label "amends" ;
+    rdfs:subPropertyOf euai:modificationRelation ;
+    owl:inverseOf euai:amendedBy .
+
+euai:enactedBy a owl:ObjectProperty ;
+    rdfs:label "enactedBy" ;
+    rdfs:subPropertyOf euai:enactmentRelation ;
+    owl:inverseOf euai:enacts .
+
+euai:enacts a owl:ObjectProperty ;
+    rdfs:label "enacts" ;
+    rdfs:subPropertyOf euai:enactmentRelation ;
+    owl:inverseOf euai:enactedBy .
+
+euai:establishedBy a owl:ObjectProperty ;
+    rdfs:label "establishedBy" ;
+    rdfs:subPropertyOf euai:establishmentRelation ;
+    owl:inverseOf euai:establishes .
+
+euai:establishes a owl:ObjectProperty ;
+    rdfs:label "establishes" ;
+    rdfs:subPropertyOf euai:establishmentRelation ;
+    owl:inverseOf euai:establishedBy .
+
+euai:includedIn a owl:ObjectProperty ;
+    rdfs:label "includedIn" ;
+    rdfs:subPropertyOf euai:structuralRelation ;
+    owl:inverseOf euai:includes .
+
+euai:includes a owl:ObjectProperty ;
+    rdfs:label "includes" ;
+    rdfs:subPropertyOf euai:structuralRelation ;
+    owl:inverseOf euai:includedIn .
+
+euai:involvedIn a owl:ObjectProperty ;
+    rdfs:label "involvedIn" ;
+    rdfs:subPropertyOf euai:involvementRelation ;
+    owl:inverseOf euai:involves .
+
+euai:involves a owl:ObjectProperty ;
+    rdfs:label "involves" ;
+    rdfs:subPropertyOf euai:involvementRelation ;
+    owl:inverseOf euai:involvedIn .
+
+euai:issuedBy a owl:ObjectProperty ;
+    rdfs:label "issuedBy" ;
+    rdfs:subPropertyOf euai:enactmentRelation ;
+    owl:inverseOf euai:issues .
+
+euai:issues a owl:ObjectProperty ;
+    rdfs:label "issues" ;
+    rdfs:subPropertyOf euai:enactmentRelation ;
+    owl:inverseOf euai:issuedBy .
+
+euai:protectedBy a owl:ObjectProperty ;
+    rdfs:label "protectedBy" ;
+    rdfs:subPropertyOf euai:protectionRelation ;
+    owl:inverseOf euai:protects .
+
+euai:protects a owl:ObjectProperty ;
+    rdfs:label "protects" ;
+    rdfs:subPropertyOf euai:protectionRelation ;
+    owl:inverseOf euai:protectedBy .
+
+euai:providedBy a owl:ObjectProperty ;
+    rdfs:label "providedBy" ;
+    rdfs:subPropertyOf euai:provisionRelation ;
+    owl:inverseOf euai:provides .
+
+euai:provides a owl:ObjectProperty ;
+    rdfs:label "provides" ;
+    rdfs:subPropertyOf euai:provisionRelation ;
+    owl:inverseOf euai:providedBy .
+
+euai:regulatedBy a owl:ObjectProperty ;
+    rdfs:label "regulatedBy" ;
+    rdfs:subPropertyOf euai:regulatoryRelation ;
+    owl:inverseOf euai:regulates .
+
+euai:regulates a owl:ObjectProperty ;
+    rdfs:label "regulates" ;
+    rdfs:subPropertyOf euai:regulatoryRelation ;
+    owl:inverseOf euai:regulatedBy .
+
+euai:repealedBy a owl:ObjectProperty ;
+    rdfs:label "repealedBy" ;
+    rdfs:subPropertyOf euai:modificationRelation ;
+    owl:inverseOf euai:repeals .
+
+euai:repeals a owl:ObjectProperty ;
+    rdfs:label "repeals" ;
+    rdfs:subPropertyOf euai:modificationRelation ;
+    owl:inverseOf euai:repealedBy .
+
+euai:requiredBy a owl:ObjectProperty ;
+    rdfs:label "requiredBy" ;
+    rdfs:subPropertyOf euai:requirementRelation ;
+    owl:inverseOf euai:requires .
+
+euai:requires a owl:ObjectProperty ;
+    rdfs:label "requires" ;
+    rdfs:subPropertyOf euai:requirementRelation ;
+    owl:inverseOf euai:requiredBy .
+
+euai:supportedBy a owl:ObjectProperty ;
+    rdfs:label "supportedBy" ;
+    rdfs:subPropertyOf euai:supportRelation ;
+    owl:inverseOf euai:supports .
+
+euai:supports a owl:ObjectProperty ;
+    rdfs:label "supports" ;
+    rdfs:subPropertyOf euai:supportRelation ;
+    owl:inverseOf euai:supportedBy .
+
+euai:usedBy a owl:ObjectProperty ;
+    rdfs:label "usedBy" ;
+    rdfs:subPropertyOf euai:usageRelation ;
+    owl:inverseOf euai:uses .
+
+euai:uses a owl:ObjectProperty ;
+    rdfs:label "uses" ;
+    rdfs:subPropertyOf euai:usageRelation ;
+    owl:inverseOf euai:usedBy .
+
+euai:Event a owl:Class ;
+    rdfs:label "Event" ;
+    rdfs:subClassOf euai:Entity .
+
+euai:Interest a owl:Class ;
+    rdfs:label "Interest" ;
+    rdfs:subClassOf euai:Entity .
+
+euai:Location a owl:Class ;
+    rdfs:label "Location" ;
+    rdfs:subClassOf euai:Entity .
+
+euai:Organization a owl:Class ;
+    rdfs:label "Organization" ;
+    rdfs:subClassOf euai:Actor .
+
+euai:Threat a owl:Class ;
+    rdfs:label "Threat" ;
+    rdfs:subClassOf euai:Risk .
+
+euai:applicationRelation a owl:ObjectProperty ;
+    rdfs:label "applicationRelation" ;
+    rdfs:subPropertyOf euai:relation .
+
+euai:LegalInstrument a owl:Class ;
+    rdfs:label "LegalInstrument" ;
+    rdfs:subClassOf euai:LegalEntity .
+
+euai:Process a owl:Class ;
+    rdfs:label "Process" ;
+    rdfs:subClassOf euai:Entity .
+
+euai:Requirement a owl:Class ;
+    rdfs:label "Requirement" ;
+    rdfs:subClassOf euai:Entity .
+
+euai:System a owl:Class ;
+    rdfs:label "System" ;
+    rdfs:subClassOf euai:Entity .
+
+euai:assignmentRelation a owl:ObjectProperty ;
+    rdfs:label "assignmentRelation" ;
+    rdfs:subPropertyOf euai:relation .
+
+euai:associationRelation a owl:ObjectProperty ;
+    rdfs:label "associationRelation" ;
+    rdfs:subPropertyOf euai:relation .
+
+euai:considerationRelation a owl:ObjectProperty ;
+    rdfs:label "considerationRelation" ;
+    rdfs:subPropertyOf euai:relation .
+
+euai:cooperationRelation a owl:ObjectProperty ;
+    rdfs:label "cooperationRelation" ;
+    rdfs:subPropertyOf euai:relation .
+
+euai:involvementRelation a owl:ObjectProperty ;
+    rdfs:label "involvementRelation" ;
+    rdfs:subPropertyOf euai:relation .
+
+euai:protectionRelation a owl:ObjectProperty ;
+    rdfs:label "protectionRelation" ;
+    rdfs:subPropertyOf euai:relation .
+
+euai:scopeRelation a owl:ObjectProperty ;
+    rdfs:label "scopeRelation" ;
+    rdfs:subPropertyOf euai:relation .
+
+euai:Actor a owl:Class ;
+    rdfs:label "Actor" ;
+    rdfs:subClassOf euai:Entity .
+
+euai:LegalEntity a owl:Class ;
+    rdfs:label "LegalEntity" ;
+    rdfs:subClassOf euai:Entity .
+
+euai:assessmentRelation a owl:ObjectProperty ;
+    rdfs:label "assessmentRelation" ;
+    rdfs:subPropertyOf euai:relation .
+
+euai:classificationRelation a owl:ObjectProperty ;
+    rdfs:label "classificationRelation" ;
+    rdfs:subPropertyOf euai:relation .
+
+euai:establishmentRelation a owl:ObjectProperty ;
+    rdfs:label "establishmentRelation" ;
+    rdfs:subPropertyOf euai:relation .
+
+euai:modificationRelation a owl:ObjectProperty ;
+    rdfs:label "modificationRelation" ;
+    rdfs:subPropertyOf euai:relation .
+
+euai:provisionRelation a owl:ObjectProperty ;
+    rdfs:label "provisionRelation" ;
+    rdfs:subPropertyOf euai:relation .
+
+euai:targetingRelation a owl:ObjectProperty ;
+    rdfs:label "targetingRelation" ;
+    rdfs:subPropertyOf euai:relation .
+
+euai:Concept a owl:Class ;
+    rdfs:label "Concept" ;
+    rdfs:subClassOf euai:Entity .
+
+euai:LegalProvision a owl:Class ;
+    rdfs:label "LegalProvision" ;
+    rdfs:subClassOf euai:LegalEntity .
+
+euai:actionRelation a owl:ObjectProperty ;
+    rdfs:label "actionRelation" ;
+    rdfs:subPropertyOf euai:relation .
+
+euai:effectRelation a owl:ObjectProperty ;
+    rdfs:label "effectRelation" ;
+    rdfs:subPropertyOf euai:relation .
+
+euai:regulatoryRelation a owl:ObjectProperty ;
+    rdfs:label "regulatoryRelation" ;
+    rdfs:subPropertyOf euai:relation .
+
+euai:supportRelation a owl:ObjectProperty ;
+    rdfs:label "supportRelation" ;
+    rdfs:subPropertyOf euai:relation .
+
+euai:usageRelation a owl:ObjectProperty ;
+    rdfs:label "usageRelation" ;
+    rdfs:subPropertyOf euai:relation .
+
+euai:derivationRelation a owl:ObjectProperty ;
+    rdfs:label "derivationRelation" ;
+    rdfs:subPropertyOf euai:relation .
+
+euai:referenceRelation a owl:ObjectProperty ;
+    rdfs:label "referenceRelation" ;
+    rdfs:subPropertyOf euai:relation .
+
+euai:DocumentChunk a owl:Class ;
+    rdfs:label "DocumentChunk" ;
+    rdfs:subClassOf euai:Entity .
+
+euai:Risk a owl:Class ;
+    rdfs:label "Risk" ;
+    rdfs:subClassOf euai:Entity .
+
+euai:enactmentRelation a owl:ObjectProperty ;
+    rdfs:label "enactmentRelation" ;
+    rdfs:subPropertyOf euai:relation .
+
+euai:requirementRelation a owl:ObjectProperty ;
+    rdfs:label "requirementRelation" ;
+    rdfs:subPropertyOf euai:relation .
+
+euai:structuralRelation a owl:ObjectProperty ;
+    rdfs:label "structuralRelation" ;
+    rdfs:subPropertyOf euai:relation .
+
+euai:Entity a owl:Class ;
+    rdfs:label "Entity" .
+
+euai:relation a owl:ObjectProperty ;
+    rdfs:label "relation" .
+

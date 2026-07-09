@@ -1,0 +1,1 @@
+The key characteristic is the capability to infer. Recital (12) states that this capability to infer refers to the process of obtaining outputs such as predictions, content, recommendations, or decisions, and to deriving models or algorithms from inputs or data. It transcends basic data processing by enabling learning, reasoning or modelling.

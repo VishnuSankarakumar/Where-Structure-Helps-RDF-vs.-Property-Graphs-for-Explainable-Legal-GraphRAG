@@ -1,0 +1,1 @@
+The listed features include: the face, eye movement, body shape, voice, prosody, gait, posture, heart rate, blood pressure, odour, and keystrokes characteristics. These are used for establishing an individual's identity by comparing biometric data to stored data in a reference database.
